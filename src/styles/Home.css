@@ -1,0 +1,67 @@
+/* Основной контейнер */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Заголовок */
+  .home-container h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Сетка рецептов */
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Сообщения о загрузке и отсутствии рецептов */
+  .loading,
+  .no-recipes {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  /* Карточка рецепта */
+  .recipe-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Картинка рецепта */
+  .recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Название рецепта */
+  .recipe-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ff6600;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .recipes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
